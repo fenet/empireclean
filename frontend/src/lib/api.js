@@ -6,7 +6,7 @@ export function getApiBaseUrl() {
   // If no env is set: use localhost in dev, same-origin in prod
   const isDev = Boolean(import.meta?.env?.DEV);
   if (isDev) {
-    return 'http://localhost:5000';
+    return 'http://localhost:6001';
   }
   if (typeof window !== 'undefined' && window.location?.origin) {
     return window.location.origin;
