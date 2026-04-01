@@ -288,7 +288,7 @@ export default function LandingAlternative() {
       </section>
 
       <section
-        className="relative h-[40vh] min-h-[220px] bg-cover bg-center bg-no-repeat md:h-[50vh]"
+        className="relative h-[70vh] min-h-[380px] bg-cover bg-center bg-no-repeat md:h-[80vh]"
         style={{ backgroundImage: `url(${cover})` }}
         aria-hidden="true"
       >
