@@ -6,7 +6,7 @@ export default function Footer() {
   const { t } = useTranslation();
   return (
            <footer className="bg-white/90 text-gray-700 mt-auto border-t border-[#e7aa51]">
-        <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="container mx-auto px-4 md:px-6 py-10 md:py-12 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
           <div>
             <h4 className="text-lg font-semibold mb-4 border-b border-gray-300 pb-2">
               {t("footer.staff.title")}
@@ -30,29 +30,6 @@ export default function Footer() {
               <li>
                 <a href="/files/Urlaubsschein_Zeitausgleich.pdf" download className="hover:text-gray-900 transition-colors">
                   {t("footer.staff.links.leaveForm")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4 border-b border-gray-300 pb-2">
-              {t("footer.partners.title")}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/files/Partnerantrag.pdf" download className="hover:text-gray-900 transition-colors">
-                  {t("footer.partners.links.partnerApplication")}
-                </a>
-              </li>
-              <li>
-                <a href="/files/Dienstleistungsvertrag.pdf" download className="hover:text-gray-900 transition-colors">
-                  {t("footer.partners.links.serviceContract")}
-                </a>
-              </li>
-              <li>
-                <a href="/files/Subvertrag.pdf" download className="hover:text-gray-900 transition-colors">
-                  {t("footer.partners.links.subcontract")}
                 </a>
               </li>
             </ul>

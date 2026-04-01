@@ -266,7 +266,7 @@ export default function Home() {
             <h3 className="text-lg font-medium mb-3">
               {t("home.selectType")}
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {cleaningTypes.map(({ key, emoji }) => {
                 const label = t(`home.types.${key}`);
                 const selected = form.typeOfCleaning === label;
@@ -314,7 +314,7 @@ export default function Home() {
               <h4 className="text-md font-medium mb-2">
                 {t("home.subcategories.title")}
               </h4>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {premiumSubcategories.map(({ key, emoji }) => {
                   const selected =
                     Array.isArray(form.subcategories) &&

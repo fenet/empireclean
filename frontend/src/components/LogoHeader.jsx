@@ -9,13 +9,13 @@ export default function LogoHeader() {
   <img
     src="/logo.png"
     alt="Logo"
-    className="w-48 h-auto mb-1 cursor-pointer"
+    className="w-44 sm:w-52 md:w-60 h-auto mb-1 cursor-pointer"
   />
 </a>
 
 
       {/* Bigger text */}
-      <h1 className="text-5xl md:text-6xl font-extrabold text-black">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-black px-4 break-words">
         Empire<span style={{ color: "#8d5a1b" }}>Clean</span>
       </h1>
       <div className="mt-3 flex items-center gap-2">

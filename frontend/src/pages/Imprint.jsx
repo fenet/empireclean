@@ -41,29 +41,29 @@ export default function Imprint() {
   return (
     <div className="flex flex-col min-h-screen pb-24 md:pb-0 brand-gradient-soft">
       {/* Navbar copied from Landing */}
-      <nav className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+      <nav className="bg-white shadow-md w-full z-50">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center space-x-3 md:space-x-6 min-w-0">
-            <img src="/logo.png" alt={t('alt.logo')} className="h-12 md:h-20 w-auto shrink-0" />
+            <img src="/logo.png" alt={t('alt.logo')} className="h-14 sm:h-16 md:h-40 w-auto shrink-0" />
 
             <a
-              href="tel:+436673302277"
+              href="tel:+436641358598"
               className="flex flex-col items-center text-[#8d5a1b] font-semibold hover:underline"
               aria-label="Call us"
               onClick={() => trackEvent('Contact_Phone_Click', { contact_method: 'phone', source: 'navbar' })}
             >
               <Phone size={24} className="mb-0.5 md:mb-1 md:size-[32px]" />
-              <span className="hidden md:inline text-base text-gray-700">+43 676 6300167</span>
+              <span className="hidden md:inline text-base text-gray-700">+43 664 1358598</span>
             </a>
 
             <a
-              href="mailto:info@empireclean.at"
+              href="mailto:office@empireclean.at"
               className="flex flex-col items-center text-[#ac7031] font-semibold hover:underline"
               aria-label="Email us"
               onClick={() => trackEvent('Contact_Email_Click', { contact_method: 'email', source: 'navbar' })}
             >
               <Mail size={24} className="mb-0.5 md:mb-1 md:size-[32px]" />
-              <span className="hidden md:inline text-base text-gray-700">info@empireclean.at</span>
+              <span className="hidden md:inline text-base text-gray-700">office@empireclean.at</span>
             </a>
           </div>
 
@@ -105,7 +105,7 @@ export default function Imprint() {
       </nav>
 
       {/* Page content */}
-      <main className="flex-1 container mx-auto px-6 pt-32 md:pt-40 pb-24">
+      <main className="flex-1 container mx-auto px-4 md:px-6 pt-12 md:pt-20 pb-24">
         <h1 className="text-3xl md:text-4xl font-bold text-[#000000] mb-6">{t('imprint.title')}</h1>
 
         <div className="bg-white rounded-2xl shadow p-6 md:p-10 space-y-6">
@@ -158,7 +158,7 @@ export default function Imprint() {
 
       {/* Footer copied from Landing */}
              <footer className="bg-white text-gray-700 mt-auto border-t border-[#e7aa51]">
-        <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h4 className="text-lg font-semibold mb-4 border-b border-gray-300 pb-2">
               {t("footer.staff.title")}
@@ -182,29 +182,6 @@ export default function Imprint() {
               <li>
                 <a href="/files/Urlaubsschein_Zeitausgleich.pdf" download className="hover:text-gray-900 transition-colors">
                   {t("footer.staff.links.leaveForm")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4 border-b border-gray-300 pb-2">
-              {t("footer.partners.title")}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/files/Partnerantrag.pdf" download className="hover:text-gray-900 transition-colors">
-                  {t("footer.partners.links.partnerApplication")}
-                </a>
-              </li>
-              <li>
-                <a href="/files/Dienstleistungsvertrag.pdf" download className="hover:text-gray-900 transition-colors">
-                  {t("footer.partners.links.serviceContract")}
-                </a>
-              </li>
-              <li>
-                <a href="/files/Subvertrag.pdf" download className="hover:text-gray-900 transition-colors">
-                  {t("footer.partners.links.subcontract")}
                 </a>
               </li>
             </ul>
@@ -294,7 +271,7 @@ export default function Imprint() {
       {/* Cookie Banner */}
       {showBanner && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-xl shadow-lg max-w-md text-center space-y-4">
+          <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-md mx-4 text-center space-y-4">
             <p className="text-gray-700">
               {t('cookies.msg')}
               <Link to="/privacy" className="underline text-[#ac7031]">
@@ -302,13 +279,13 @@ export default function Imprint() {
               </Link>
               .
             </p>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <button
                 onClick={() => {
                   declineCookies();
                   trackEvent('Cookie_Decline_Click', { consent: false, source: 'banner' });
                 }}
-                className="bg-gray-300 text-black px-6 py-2 rounded-md font-semibold hover:opacity-90 transition"
+                className="bg-gray-300 text-black px-6 py-2 rounded-md font-semibold hover:opacity-90 transition w-full sm:w-auto"
               >
                 {t('cookies.decline')}
               </button>
@@ -317,7 +294,7 @@ export default function Imprint() {
                   acceptCookies();
                   trackEvent('Cookie_Accept_Click', { consent: true, source: 'banner' });
                 }}
-                className="brand-btn text-white px-6 py-2 rounded-md font-semibold hover:opacity-90 transition"
+                className="brand-btn text-white px-6 py-2 rounded-md font-semibold hover:opacity-90 transition w-full sm:w-auto"
               >
                 {t('cookies.accept')}
               </button>

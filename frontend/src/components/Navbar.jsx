@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="bg-white shadow-md p-4 flex items-center justify-between">
       {/* Logo */}
       <Link to="/" className="flex items-center space-x-2">
-        <img src="/logo.png" alt="EmpireClean" className="h-10 w-auto" />
+        <img src="/logo.png" alt="EmpireClean" className="h-20 md:h-40 w-auto" />
         <span className="text-xl font-bold text-[#8d5a1b]">EmpireClean</span>
       </Link>
 

@@ -4,6 +4,10 @@
 
 html, body, #root { height: 100%; }
 
+* {
+	box-sizing: border-box;
+}
+
 :root {
 	--brand-1: #ac7031;
 	--brand-2: #e7aa51;
@@ -13,7 +17,24 @@ html, body, #root { height: 100%; }
 }
 
 body {
-	background: linear-gradient(135deg, rgba(255, 228, 153, 0.35), rgba(231, 170, 81, 0.18));
+	background: #ffffff;
+	overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+	max-width: 100%;
+	height: auto;
+}
+
+.iti {
+	width: 100%;
+}
+
+.iti input {
+	width: 100%;
 }
 
 .brand-gradient {
@@ -21,7 +42,7 @@ body {
 }
 
 .brand-gradient-soft {
-	background-image: linear-gradient(135deg, rgba(172, 112, 49, 0.15), rgba(231, 170, 81, 0.2), rgba(255, 228, 153, 0.35));
+	background: #ffffff;
 }
 
 .brand-btn {

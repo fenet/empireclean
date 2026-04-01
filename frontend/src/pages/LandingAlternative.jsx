@@ -179,12 +179,12 @@ export default function LandingAlternative() {
   const c = useMemo(() => content[lang], [lang]);
 
   return (
-    <div className="min-h-screen brand-gradient-soft text-slate-900">
-      <nav className="sticky top-0 z-50 border-b border-[#e7aa51] bg-white/90 backdrop-blur">
+    <div className="min-h-screen bg-white text-slate-900">
+      <nav className="z-50 border-b border-[#e7aa51] bg-white/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-3 md:px-6">
           <div className="flex items-center gap-3">
             <Link to="/" aria-label="Go to home page">
-              <img src="/logo.png" alt="EmpireClean" className="h-14 w-auto md:h-20" />
+              <img src="/logo.png" alt="EmpireClean" className="h-14 w-auto sm:h-16 md:h-40" />
             </Link>
           </div>
 
@@ -220,12 +220,12 @@ export default function LandingAlternative() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#ffe499]/60 via-white to-[#e7aa51]/30" />
         <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-14 md:grid-cols-2 md:px-6 md:py-20">
           <div>
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl">{c.heroTitle}</h1>
-            <p className="mt-4 max-w-xl text-lg text-slate-700">{c.heroSubtitle}</p>
+            <h1 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">{c.heroTitle}</h1>
+            <p className="mt-4 max-w-xl text-base sm:text-lg text-slate-700">{c.heroSubtitle}</p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-start">
               <a
-                href="tel:+436766300167"
+                href="tel:+436641358598"
                 className="inline-flex items-center justify-center gap-2 rounded-xl brand-btn px-8 py-3 text-base font-bold shadow-lg hover:opacity-95 md:px-10 md:py-4 md:text-lg"
                 onClick={() => trackEvent("AltLanding_Hero_Call_Click", { cta: "hero_call_primary" })}
               >
@@ -275,20 +275,20 @@ export default function LandingAlternative() {
             </p>
             <div className="mt-6 space-y-3">
               <a
-                href="tel:+436766300167"
+                href="tel:+436641358598"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-xl brand-btn px-5 py-3 font-semibold shadow-lg"
                 onClick={() => trackEvent("AltLanding_Hero_Call_Click", { cta: "free_consultation_call_card" })}
               >
                 <Phone className="h-4 w-4" /> {c.heroPrimaryCta}
               </a>
             </div>
-            <p className="mt-4 text-center text-sm text-slate-500">+43 676 6300167 · info@empireclean.at</p>
+            <p className="mt-4 text-center text-sm text-slate-500">+43 664 1358598 · office@empireclean.at</p>
           </div>
         </div>
       </section>
 
       <section
-        className="relative h-[70vh] min-h-[380px] bg-cover bg-center bg-no-repeat md:h-[80vh]"
+        className="relative h-[55vh] min-h-[280px] bg-cover bg-center bg-no-repeat md:h-[80vh]"
         style={{ backgroundImage: `url(${cover})` }}
         aria-hidden="true"
       >
@@ -446,23 +446,23 @@ export default function LandingAlternative() {
 
       <section className="border-t border-[#e7aa51] bg-white py-14">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="rounded-2xl bg-gradient-to-r from-[#8d5a1b] via-[#ac7031] to-[#e7aa51] px-6 py-10 text-white md:px-10">
-            <h3 className="text-3xl font-bold">{c.finalTitle}</h3>
+          <div className="rounded-2xl bg-gradient-to-r from-[#8d5a1b] via-[#ac7031] to-[#e7aa51] px-5 py-8 text-white md:px-10 md:py-10">
+            <h3 className="text-2xl md:text-3xl font-bold">{c.finalTitle}</h3>
             <p className="mt-2 text-white/90">{c.finalSubtitle}</p>
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                href="tel:+436766300167"
+                href="tel:+436641358598"
                 className="rounded-xl bg-white px-6 py-3 font-semibold text-[#8d5a1b] shadow-lg"
                 onClick={() => trackEvent("AltLanding_Final_CTA_Click", { cta: "final_consultation_call" })}
               >
                 {c.finalCta}
               </a>
-              <a href="tel:+436766300167" className="inline-flex items-center gap-2 rounded-xl border border-white/50 bg-white/10 px-5 py-3">
-                <Phone className="h-4 w-4" /> +43 676 6300167
+              <a href="tel:+436641358598" className="inline-flex items-center gap-2 rounded-xl border border-white/50 bg-white/10 px-5 py-3">
+                <Phone className="h-4 w-4" /> +43 664 1358598
               </a>
-              <a href="mailto:info@empireclean.at" className="inline-flex items-center gap-2 rounded-xl border border-white/30 px-5 py-3">
-                <Mail className="h-4 w-4" /> info@empireclean.at
+              <a href="mailto:office@empireclean.at" className="inline-flex items-center gap-2 rounded-xl border border-white/30 px-5 py-3">
+                <Mail className="h-4 w-4" /> office@empireclean.at
               </a>
             </div>
 
@@ -479,7 +479,7 @@ export default function LandingAlternative() {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#e7aa51] bg-white/95 p-3 shadow-xl backdrop-blur md:hidden">
         <div className="mx-auto flex max-w-7xl gap-2">
           <a
-            href="tel:+436766300167"
+            href="tel:+436641358598"
             className="inline-flex flex-1 items-center justify-center gap-2 rounded-xl brand-btn px-4 py-3 text-sm font-semibold"
             onClick={() => trackEvent("AltLanding_Mobile_Call_Click", { cta: "sticky_mobile_call" })}
           >

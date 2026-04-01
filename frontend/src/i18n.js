@@ -6,8 +6,8 @@ const resources = {
     translation: {
       nav: {
         bookNow: "Book Cleaning Now",
-        phone: "+43 676 6300167",
-        email: "info@empireclean.at"
+        phone: "+43 664 1358598",
+        email: "office@empireclean.at"
       },
       imprint: {
         title: "Imprint",
@@ -28,9 +28,9 @@ const resources = {
         hqValue: "Simmeringer Hauptstraße 24, 1110 Vienna",
         contactTitle: "Contact details",
         phoneLabel: "Phone",
-        phoneValue: "+43 (0)676 6300167",
+        phoneValue: "+43 664 1358598",
         emailLabel: "Email",
-        emailValue: "info@empireclean.at",
+        emailValue: "office@empireclean.at",
         membership: "Member of the Vienna Economic Chamber, Vienna Commercial Service Providers Section"
       },
       hero: {
@@ -49,16 +49,14 @@ const resources = {
         choose: "Choose me",
         rating: "{{rating}} rating · {{reviews}} reviews",
         workers: {
-          amelia: "Amelia K.",
-          markus: "Markus L.",
-          selin: "Selin A.",
-          leon: "Leon M.",
-          maria: "Maria S.",
-          yusuf: "Yusuf T.",
-          sofia: "Sofia P.",
-          jakob: "Jakob R.",
-          noemi: "Noemi F.",
-          anna: "Anna D."
+          sarahM: "Sarah M.",
+          danielK: "Daniel K.",
+          linaR: "Lina R.",
+          omarH: "Omar H.",
+          noraA: "Nora A.",
+          milaT: "Mila T.",
+          leoB: "Leo B.",
+          emmaS: "Emma S."
         }
       },
       services: {
@@ -215,8 +213,8 @@ const resources = {
     translation: {
       nav: {
         bookNow: "Reinigung jetzt buchen",
-        phone: "+43 676 6300167",
-        email: "info@empireclean.at"
+        phone: "+43 664 1358598",
+        email: "office@empireclean.at"
       },
       imprint: {
         title: "Impressum",
@@ -237,9 +235,9 @@ const resources = {
         hqValue: "Simmeringer Hauptstraße 24, 1110 Wien",
         contactTitle: "Kontaktdaten",
         phoneLabel: "Telefon",
-        phoneValue: "+43 (0)676 6300167",
+        phoneValue: "+43 664 1358598",
         emailLabel: "E-Mail",
-        emailValue: "info@empireclean.at",
+        emailValue: "office@empireclean.at",
         membership: "Mitglied der Wirtschaftskammer Wien, Fachgruppe Gewerbliche Dienstleister"
       },
       profile: {
@@ -248,16 +246,14 @@ const resources = {
         choose: "Wähle mich",
         rating: "{{rating}} Bewertung · {{reviews}} Bewertungen",
         workers: {
-          amelia: "Amelia K.",
-          markus: "Markus L.",
-          selin: "Selin A.",
-          leon: "Leon M.",
-          maria: "Maria S.",
-          yusuf: "Yusuf T.",
-          sofia: "Sofia P.",
-          jakob: "Jakob R.",
-          noemi: "Noemi F.",
-          anna: "Anna D."
+          sarahM: "Sarah M.",
+          danielK: "Daniel K.",
+          linaR: "Lina R.",
+          omarH: "Omar H.",
+          noraA: "Nora A.",
+          milaT: "Mila T.",
+          leoB: "Leo B.",
+          emmaS: "Emma S."
         }
       },
       hero: {

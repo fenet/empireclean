@@ -42,28 +42,28 @@ export default function Landing() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen pb-24 md:pb-0">
-      <nav className="bg-white shadow-md fixed w-full top-0 left-0 z-50">
+    <div className="flex flex-col min-h-screen pb-24 md:pb-0 brand-gradient-soft">
+      <nav className="bg-white shadow-md w-full z-50">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center space-x-3 md:space-x-6 min-w-0">
-            <img src="/logo.png" alt={t("alt.logo")} className="h-12 md:h-20 w-auto shrink-0" />
+            <img src="/logo.png" alt={t("alt.logo")} className="h-14 sm:h-16 md:h-40 w-auto shrink-0" />
             <a
-              href="tel:+436673302277"
+              href="tel:+436641358598"
               className="flex flex-col items-center text-[#8d5a1b] font-semibold hover:underline"
               aria-label="Call us"
               onClick={() => trackEvent("Contact_Phone_Click", { contact_method: "phone", source: "navbar" })}
             >
               <Phone size={24} className="mb-0.5 md:mb-1 md:size-[32px]" />
-              <span className="hidden md:inline text-base text-gray-700">+43 676 6300167</span>
+              <span className="hidden md:inline text-base text-gray-700">+43 664 1358598</span>
             </a>
             <a
-              href="mailto:info@empireclean.at"
+              href="mailto:office@empireclean.at"
               className="flex flex-col items-center text-[#ac7031] font-semibold hover:underline"
               aria-label="Email us"
               onClick={() => trackEvent("Contact_Email_Click", { contact_method: "email", source: "navbar" })}
             >
               <Mail size={24} className="mb-0.5 md:mb-1 md:size-[32px]" />
-              <span className="hidden md:inline text-base text-gray-700">info@empireclean.at</span>
+              <span className="hidden md:inline text-base text-gray-700">office@empireclean.at</span>
             </a>
           </div>
 
@@ -109,21 +109,21 @@ export default function Landing() {
         </div>
       </nav>
 
-      <section className="flex flex-col items-center justify-center text-center px-6 pt-32 md:pt-40 pb-24 bg-gray-50">
-        <h1 className="text-4xl md:text-6xl font-bold text-[#000000] mb-6">{t("hero.title")}</h1>
+      <section className="flex flex-col items-center justify-center text-center px-4 md:px-6 pt-14 md:pt-24 pb-16 md:pb-24">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-[#000000] mb-6">{t("hero.title")}</h1>
         <p className="text-lg text-gray-700 max-w-2xl mb-8">{t("hero.subtitle")}</p>
         <div className="flex flex-col items-center justify-center gap-3">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link
             to="/profile"
-            className="brand-btn px-10 py-4 rounded-xl text-xl font-semibold hover:shadow-lg hover:scale-105 transition"
+            className="brand-btn px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-xl font-semibold hover:shadow-lg hover:scale-105 transition"
             onClick={() => trackEvent("Landing_CTA_Click", { cta: "hero_book_here" })}
           >
             JETZT BUCHEN
           </Link>
           <Link
             to="/order/request"
-            className="px-10 py-4 rounded-xl text-xl font-semibold bg-gradient-to-r from-[#facc15] via-[#f97316] to-[#fb923c] text-black shadow-md hover:shadow-lg hover:scale-105 transition"
+            className="px-6 sm:px-10 py-3 sm:py-4 rounded-xl text-base sm:text-xl font-semibold bg-gradient-to-r from-[#facc15] via-[#f97316] to-[#fb923c] text-black shadow-md hover:shadow-lg hover:scale-105 transition"
             onClick={() => {
               trackEvent("Landing_Job_CTA_Click", { cta: "hero_offer_request" });
             }}
@@ -136,17 +136,17 @@ export default function Landing() {
       </section>
 
       <section
-        className="relative h-[70vh] bg-fixed bg-center bg-cover"
+        className="relative h-[52vh] sm:h-[62vh] md:h-[70vh] bg-center bg-cover md:bg-fixed"
         style={{ backgroundImage: `url(${cover})` }}
       >
         <div className="absolute inset-0 bg-black/10"></div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-16 space-y-12">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-12">
         <div className="grid sm:grid-cols-3 gap-8">
           <Link
             to="/profile"
-            className="bg-gradient-to-r from-[#ffe499] via-[#e7aa51] to-[#ac7031] text-black font-semibold rounded-2xl p-8 text-center hover:scale-105 hover:shadow-xl transition"
+            className="bg-gradient-to-r from-[#ffe499] via-[#e7aa51] to-[#ac7031] text-black font-semibold rounded-2xl p-6 md:p-8 text-center hover:scale-105 hover:shadow-xl transition"
             onClick={() => trackEvent("Service_Standard_Click", { service_type: "Standard", source: "landing_grid" })}
           >
             <h4 className="text-2xl font-bold mb-2">{t("services.standard.title")}</h4>
@@ -154,7 +154,7 @@ export default function Landing() {
           </Link>
           <Link
             to="/profile"
-            className="bg-gradient-to-r from-[#8d5a1b] to-[#ac7031] text-white font-semibold rounded-2xl p-8 text-center hover:scale-105 hover:shadow-xl transition"
+            className="bg-gradient-to-r from-[#8d5a1b] to-[#ac7031] text-white font-semibold rounded-2xl p-6 md:p-8 text-center hover:scale-105 hover:shadow-xl transition"
             onClick={() => trackEvent("Service_Deep_Click", { service_type: "Deep", source: "landing_grid" })}
           >
             <h4 className="text-2xl font-bold mb-2">{t("services.deep.title")}</h4>
@@ -162,7 +162,7 @@ export default function Landing() {
           </Link>
           <Link
             to="/profile"
-            className="bg-gradient-to-r from-[#3acfd5] to-[#3a7bd5] text-black font-semibold rounded-2xl p-8 text-center hover:scale-105 hover:shadow-xl transition"
+            className="bg-gradient-to-r from-[#3acfd5] to-[#3a7bd5] text-black font-semibold rounded-2xl p-6 md:p-8 text-center hover:scale-105 hover:shadow-xl transition"
             onClick={() => trackEvent("Service_Office_Click", { service_type: "Office", source: "landing_grid" })}
           >
             <h4 className="text-2xl font-bold mb-2">{t("services.office.title")}</h4>
@@ -189,13 +189,13 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-16 space-y-16">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-16">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="overflow-hidden rounded-2xl shadow-lg">
             <img
               src={homeImg}
               alt={t("alt.homeCleaning")}
-              className="w-full h-[400px] object-cover transition-transform duration-500 hover:scale-105"
+              className="w-full h-64 sm:h-80 md:h-[400px] object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
           <div className="space-y-4">
@@ -227,14 +227,14 @@ export default function Landing() {
             <img
               src={officeImg}
               alt={t("alt.officeCleaning")}
-              className="w-full h-[400px] object-cover transition-transform duration-500 hover:scale-105"
+              className="w-full h-64 sm:h-80 md:h-[400px] object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
         </div>
       </section>
 
            <footer className="bg-white text-gray-700 mt-auto border-t border-gray-200">
-        <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="container mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <h4 className="text-lg font-semibold mb-4 border-b border-gray-300 pb-2">
               {t("footer.staff.title")}
@@ -258,29 +258,6 @@ export default function Landing() {
               <li>
                 <a href="/files/Urlaubsschein_Zeitausgleich.pdf" download className="hover:text-gray-900 transition-colors">
                   {t("footer.staff.links.leaveForm")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4 border-b border-gray-300 pb-2">
-              {t("footer.partners.title")}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/files/Partnerantrag.pdf" download className="hover:text-gray-900 transition-colors">
-                  {t("footer.partners.links.partnerApplication")}
-                </a>
-              </li>
-              <li>
-                <a href="/files/Dienstleistungsvertrag.pdf" download className="hover:text-gray-900 transition-colors">
-                  {t("footer.partners.links.serviceContract")}
-                </a>
-              </li>
-              <li>
-                <a href="/files/Subvertrag.pdf" download className="hover:text-gray-900 transition-colors">
-                  {t("footer.partners.links.subcontract")}
                 </a>
               </li>
             </ul>
@@ -379,7 +356,7 @@ export default function Landing() {
 
       {showBanner && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-xl shadow-lg max-w-md text-center space-y-4">
+          <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-md mx-4 text-center space-y-4">
             <p className="text-gray-700">
               {t("cookies.msg")}
               <Link to="/privacy" className="underline text-[#ac7031]">
@@ -387,13 +364,13 @@ export default function Landing() {
               </Link>
               .
             </p>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
               <button
                 onClick={() => {
                   declineCookies();
                   trackEvent("Cookie_Decline_Click", { consent: false, source: "banner" });
                 }}
-                className="bg-gray-300 text-black px-6 py-2 rounded-md font-semibold hover:opacity-90 transition"
+                className="bg-gray-300 text-black px-6 py-2 rounded-md font-semibold hover:opacity-90 transition w-full sm:w-auto"
               >
                 {t("cookies.decline")}
               </button>
@@ -402,7 +379,7 @@ export default function Landing() {
                   acceptCookies();
                   trackEvent("Cookie_Accept_Click", { consent: true, source: "banner" });
                 }}
-                className="brand-btn text-white px-6 py-2 rounded-md font-semibold hover:opacity-90 transition"
+                className="brand-btn text-white px-6 py-2 rounded-md font-semibold hover:opacity-90 transition w-full sm:w-auto"
               >
                 {t("cookies.accept")}
               </button>

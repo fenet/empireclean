@@ -105,7 +105,7 @@ export default function PriceCalculator() {
 
   return (
     <div className="flex min-h-screen flex-col brand-gradient-soft">
-      <nav className="bg-white shadow-md fixed inset-x-0 top-0 z-50">
+      <nav className="bg-white shadow-md inset-x-0 z-50">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-3 md:px-6 md:py-4">
           <div className="flex min-w-0 items-center space-x-3 md:space-x-6">
             <Link
@@ -113,11 +113,11 @@ export default function PriceCalculator() {
               className="flex items-center"
               onClick={() => trackEvent("Navbar_Logo_Click", { source: "calculator" })}
             >
-              <img src="/logo.png" alt={t("alt.logo")} className="h-12 w-auto shrink-0 md:h-20" />
+              <img src="/logo.png" alt={t("alt.logo")} className="h-14 sm:h-16 w-auto shrink-0 md:h-40" />
             </Link>
             
             <a
-              href="tel:+436673302277"
+              href="tel:+436641358598"
               className="flex flex-col items-center font-semibold text-[#8d5a1b] hover:underline"
               aria-label="Call us"
               onClick={() =>
@@ -125,10 +125,10 @@ export default function PriceCalculator() {
               }
             >
               <Phone size={24} className="mb-0.5 md:mb-1 md:size-[32px]" />
-              <span className="hidden text-base text-gray-700 md:inline">+43 676 6300167</span>
+              <span className="hidden text-base text-gray-700 md:inline">+43 664 1358598</span>
             </a>
             <a
-              href="mailto:info@empireclean.at"
+              href="mailto:office@empireclean.at"
               className="flex flex-col items-center font-semibold text-[#ac7031] hover:underline"
               aria-label="Email us"
               onClick={() =>
@@ -136,7 +136,7 @@ export default function PriceCalculator() {
               }
             >
               <Mail size={24} className="mb-0.5 md:mb-1 md:size-[32px]" />
-              <span className="hidden text-base text-gray-700 md:inline">info@empireclean.at</span>
+              <span className="hidden text-base text-gray-700 md:inline">office@empireclean.at</span>
             </a>
           </div>
 
@@ -186,7 +186,7 @@ export default function PriceCalculator() {
         </div>
       </nav>
 
-      <main className="flex flex-1 justify-center px-4 pb-16 pt-32 md:px-6 md:pt-36">
+      <main className="flex flex-1 justify-center px-4 pb-16 pt-12 md:px-6 md:pt-20">
         <div className="flex w-full max-w-5xl flex-col gap-10">
           <header className="text-center space-y-4">
             <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#fff2d1] text-[#8d5a1b]">
@@ -351,7 +351,7 @@ export default function PriceCalculator() {
       </main>
 
       <footer className="border-t border-gray-200 bg-white text-gray-700">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-12 md:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-12 md:grid-cols-3">
           <div>
             <h4 className="mb-4 border-b border-gray-300 pb-2 text-lg font-semibold">
               {t("footer.staff.title")}
@@ -379,29 +379,6 @@ export default function PriceCalculator() {
                   className="transition-colors hover:text-gray-900"
                 >
                   {t("footer.staff.links.leaveForm")}
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="mb-4 border-b border-gray-300 pb-2 text-lg font-semibold">
-              {t("footer.partners.title")}
-            </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/files/Partnerantrag.pdf" download className="transition-colors hover:text-gray-900">
-                  {t("footer.partners.links.partnerApplication")}
-                </a>
-              </li>
-              <li>
-                <a href="/files/Dienstleistungsvertrag.pdf" download className="transition-colors hover:text-gray-900">
-                  {t("footer.partners.links.serviceContract")}
-                </a>
-              </li>
-              <li>
-                <a href="/files/Subvertrag.pdf" download className="transition-colors hover:text-gray-900">
-                  {t("footer.partners.links.subcontract")}
                 </a>
               </li>
             </ul>
