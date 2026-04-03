@@ -423,7 +423,7 @@ export default function LandingAlternative() {
           <div className="mt-8 flex justify-center">
             <Link
               to="/profile"
-              className="rounded-xl brand-btn px-10 py-4 text-center text-lg font-bold shadow-lg hover:opacity-95 md:px-12 md:py-5"
+              className="rounded-xl bg-[#3acfd5] text-white px-10 py-4 text-center text-lg font-bold shadow-lg hover:bg-[#30bcc2] transition md:px-12 md:py-5"
               onClick={() => trackEvent("AltLanding_Process_CTA_Click", { cta: "book_cleaning" })}
             >
               {lang === "de" ? "Reinigung buchen" : "Book Your Cleaning"}

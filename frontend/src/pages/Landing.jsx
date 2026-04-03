@@ -46,7 +46,9 @@ export default function Landing() {
       <nav className="bg-white shadow-md w-full z-50">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex flex-wrap justify-between items-center gap-2">
           <div className="flex items-center space-x-3 md:space-x-6 min-w-0">
-            <img src="/logo.png" alt={t("alt.logo")} className="h-14 sm:h-16 md:h-40 w-auto shrink-0" />
+            <Link to="/" aria-label="Go to home page" className="shrink-0">
+              <img src="/logo.png" alt={t("alt.logo")} className="h-14 sm:h-16 md:h-40 w-auto" />
+            </Link>
             <a
               href="tel:+436641358598"
               className="flex flex-col items-center text-[#8d5a1b] font-semibold hover:underline"
@@ -269,7 +271,7 @@ export default function Landing() {
             </h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/files/Dienstleistungsvertrag1.pdf" download className="hover:text-gray-900 transition-colors">
+                <a href="/files/ServiceStandards.pdf" download className="hover:text-gray-900 transition-colors">
                   {t("footer.customers.links.cleaningStandards")}
                 </a>
               </li>
@@ -297,7 +299,7 @@ export default function Landing() {
             </h4>
             <div className="flex space-x-4 mb-6">
               <a
-                href="https://www.instagram.com/putzelf11/"
+                href="https://www.instagram.com/empire.clean.vienna/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-900 transition-colors"
@@ -313,7 +315,7 @@ export default function Landing() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/putz-elf-wien1110/"
+                href="https://www.linkedin.com/in/empire-clean-vienna/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-900 transition-colors"

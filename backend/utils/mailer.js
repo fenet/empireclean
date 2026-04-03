@@ -14,7 +14,7 @@ const SMTP_SECURE =
 const SMTP_USER = process.env.SMTP_USER || process.env.EMAIL_USER;
 const SMTP_PASS = process.env.SMTP_PASS || process.env.EMAIL_PASS;
 const SMTP_FROM = process.env.SMTP_FROM || SMTP_USER || process.env.EMAIL_USER;
-const SMTP_BCC = process.env.SMTP_BCC || "office@putzelf.com";
+const SMTP_BCC = process.env.SMTP_BCC || "office@empireclean.at";
 
 if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
   console.warn("Warning: missing SMTP config. Check SMTP_HOST / SMTP_USER / SMTP_PASS");
@@ -130,7 +130,7 @@ export async function sendBookingConfirmation(toOrBooking, maybeBooking) {
   const htmlContent = `
   <div style="font-family: Arial, sans-serif; background: #f9fafb; padding: 20px; color: #333;">
     <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <div style="background: linear-gradient(90deg, #5be3e3, #0097b2); padding: 20px; text-align: center; color: #fff;">
+      <div style="background: #ac7031; padding: 20px; text-align: center; color: #fff;">
         <h1 style="margin: 0; font-size: 24px;">Buchungsbestätigung</h1>
       </div>
       <div style="padding: 20px;">
@@ -140,7 +140,6 @@ export async function sendBookingConfirmation(toOrBooking, maybeBooking) {
           Nachfolgend die Details.
         </p>
         <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
-          <table style="width: 100%; margin-top: 20px; border-collapse: collapse;">
           <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>📍 Location</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${booking.address || booking.location || "N/A"}</td></tr>
           <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>📅 Date</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${booking.date || "N/A"}</td></tr>
           <tr><td style="padding: 8px; border-bottom: 1px solid #eee;"><strong>⏰ Time</strong></td><td style="padding: 8px; border-bottom: 1px solid #eee;">${booking.time || "N/A"}</td></tr>
@@ -157,27 +156,22 @@ export async function sendBookingConfirmation(toOrBooking, maybeBooking) {
         </p>
         <p style="font-size: 15px; margin-top: 20px;">
           Mit freundlichen Grüßen,<br />
-          <strong>PutzELF Team</strong>
+          <strong>Empireclean Team</strong>
         </p>
       </div>
       <div style="background: #f1f1f1; padding: 20px; text-align: center; font-size: 13px; color: #666;">
         <div style="margin-bottom: 15px;">
-          <a href="https://your-domain.com/terms" style="margin: 0 10px; color: #666; text-decoration: none;">Terms & Conditions</a> |
-          <a href="https://your-domain.com/privacy" style="margin: 0 10px; color: #666; text-decoration: none;">Privacy Policy</a> |
-          <a href="https://your-domain.com/imprint" style="margin: 0 10px; color: #666; text-decoration: none;">Imprint</a>
-        </div>
-        <div style="margin-bottom: 15px;">
-          <a href="https://instagram.com" style="margin: 0 8px;" target="_blank">
+          <a href="https://www.instagram.com/empire.clean.vienna/" style="margin: 0 8px;" target="_blank" rel="noopener noreferrer">
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 24px; height: 24px;" />
           </a>
-          <a href="https://facebook.com" style="margin: 0 8px;" target="_blank">
+          <a href="" style="margin: 0 8px;" target="_blank" rel="noopener noreferrer">
             <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 24px; height: 24px;" />
           </a>
-          <a href="https://linkedin.com" style="margin: 0 8px;" target="_blank">
+          <a href="https://www.linkedin.com/in/empire-clean-vienna/" style="margin: 0 8px;" target="_blank" rel="noopener noreferrer">
             <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn" style="width: 24px; height: 24px;" />
           </a>
         </div>
-        <div>© ${new Date().getFullYear()} PutzELF. All rights reserved.</div>
+        <div>© ${new Date().getFullYear()} Empireclean Team. All rights reserved.</div>
       </div>
     </div>
   </div>
@@ -186,10 +180,10 @@ export async function sendBookingConfirmation(toOrBooking, maybeBooking) {
   try {
     const transporter = await getTransporter();
     const info = await transporter.sendMail({
-      from: `"PutzELF" <${SMTP_FROM}>`,
+      from: `"Empireclean Team" <${SMTP_FROM}>`,
       to: Array.isArray(to) ? to.join(", ") : to,
       bcc: SMTP_BCC,
-      subject: "Your Booking Confirmation – PutzELF",
+      subject: "Your Booking Confirmation – Empireclean",
       text: "Your booking is confirmed! Please check the details in the email.",
       html: htmlContent,
     });
@@ -226,7 +220,7 @@ export async function sendQuoteRequestConfirmation(toOrBooking, maybeBooking) {
   const htmlContent = `
   <div style="font-family: Arial, sans-serif; background: #f9fafb; padding: 20px; color: #333;">
     <div style="max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-      <div style="background: linear-gradient(90deg, #5be3e3, #0097b2); padding: 20px; text-align: center; color: #fff;">
+      <div style="background: #ac7031; padding: 20px; text-align: center; color: #fff;">
         <h1 style="margin: 0; font-size: 24px;">Anfrage erhalten</h1>
       </div>
       <div style="padding: 20px;">
@@ -244,8 +238,22 @@ export async function sendQuoteRequestConfirmation(toOrBooking, maybeBooking) {
         </p>
         <p style="font-size: 15px; margin-top: 20px;">
           Mit freundlichen Grüßen,<br />
-          <strong>PutzELF Team</strong>
+          <strong>Empireclean Team</strong>
         </p>
+      </div>
+      <div style="background: #f1f1f1; padding: 20px; text-align: center; font-size: 13px; color: #666;">
+        <div style="margin-bottom: 15px;">
+          <a href="https://www.instagram.com/empire.clean.vienna/" style="margin: 0 8px;" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 24px; height: 24px;" />
+          </a>
+          <a href="" style="margin: 0 8px;" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 24px; height: 24px;" />
+          </a>
+          <a href="https://www.linkedin.com/in/empire-clean-vienna/" style="margin: 0 8px;" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn" style="width: 24px; height: 24px;" />
+          </a>
+        </div>
+        <div>© ${new Date().getFullYear()} Empireclean Team. All rights reserved.</div>
       </div>
     </div>
   </div>
@@ -253,10 +261,10 @@ export async function sendQuoteRequestConfirmation(toOrBooking, maybeBooking) {
 
   const transporter = await getTransporter();
   const info = await transporter.sendMail({
-    from: `"PutzELF" <${SMTP_FROM}>`,
+    from: `"Empireclean Team" <${SMTP_FROM}>`,
     to: Array.isArray(to) ? to.join(", ") : to,
     bcc: SMTP_BCC,
-    subject: "Ihre Anfrage bei PutzELF",
+    subject: "Ihre Anfrage bei Empireclean",
     text: `Vielen Dank für Ihre Anfrage. Name: ${booking?.name || "N/A"}, E-Mail: ${booking?.email || "N/A"}, Telefon: ${booking?.phone || "N/A"}`,
     html: htmlContent,
   });

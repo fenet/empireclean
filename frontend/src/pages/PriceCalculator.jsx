@@ -391,7 +391,7 @@ export default function PriceCalculator() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="/files/Dienstleistungsvertrag1.pdf"
+                  href="/files/ServiceStandards.pdf"
                   download
                   className="transition-colors hover:text-gray-900"
                 >
@@ -422,7 +422,7 @@ export default function PriceCalculator() {
             </h4>
             <div className="mb-6 flex space-x-4">
               <a
-                href="https://www.instagram.com/putzelf11/"
+                href="https://www.instagram.com/empire.clean.vienna/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-gray-900"
@@ -438,7 +438,7 @@ export default function PriceCalculator() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/putz-elf-wien1110/"
+                href="https://www.linkedin.com/in/empire-clean-vienna/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors hover:text-gray-900"

@@ -256,9 +256,9 @@ app.put("/api/bookings/:id/confirm", attachUserIfPresent, async (req, res) => {
       (existing.typeOfCleaning || "").toLowerCase() === "angebot anfragen";
 
     if (isQuoteRequest) {
-      await sendQuoteRequestConfirmation([booking.email, "office@putzelf.com"], booking);
+      await sendQuoteRequestConfirmation([booking.email, "office@empireclean.at"], booking);
     } else {
-      await sendBookingConfirmation([booking.email, "office@putzelf.com"], booking);
+      await sendBookingConfirmation([booking.email, "office@empireclean.at"], booking);
     }
 
     try {
